@@ -2,7 +2,19 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(0%); /* FF 35+ */
+    transform-origin: 50% 65%;
+    transition: transform 2s, filter .5s ease-in-out;
+   
 }
+
+.gallery-item img:hover {
+    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+    filter: grayscale(100%); /* FF 35+ */
+    transform: scale(1.1);
+  }
+
 .gallery{
     
     width: 100%;
