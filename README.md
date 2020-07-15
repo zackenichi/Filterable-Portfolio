@@ -9,3 +9,8 @@ Divided css and js to different files
 
 v1.1.0
 Added hover effects : Slow mo zoom and greyscale
+
+v1.1.1 
+Updated images
+adjusted hover transition durations
+Added text but still need to fix hover effects
