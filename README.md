@@ -14,3 +14,8 @@ v1.1.1
 Updated images
 adjusted hover transition durations
 Added text but still need to fix hover effects
+
+v.1.1.2
+Organized CSS
+Added class to inner img
+Change hover effects
