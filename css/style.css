@@ -51,7 +51,17 @@
 
 }
 
-/*make text move up from bottom*/
+/*inner text effects*/
+.gallery-subtitle{
+    opacity: 0;
+}
+
+.gallery-item:hover .gallery-subtitle{
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/*end*/
 
 .gallery-item:hover .gallery-image{
     -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
