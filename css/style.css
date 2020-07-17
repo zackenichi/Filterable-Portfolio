@@ -45,11 +45,13 @@
     color: #f1f1f1; 
     font-size: 18px;
      width: 50%;
-     height: 90%;
+     height: 80%;
     /*width: 92%; */
     border-collapse:collapse;
 
 }
+
+
 
 /*inner text effects*/
 .gallery-subtitle{
@@ -73,9 +75,9 @@
 
 
 .gallery-item:hover .gallery-txt {
-    transition: width .5s;
+    transition: width .5s ease-out;
     opacity: 1;
-    width: 92%; 
+    width: 80%; 
   }
 
 .show {
@@ -110,4 +112,17 @@ color: white;
 
 #z-portfolio-filter {
     padding: 20px;
+}
+
+
+/*responsiveness*/
+
+@media (max-width: 1024px) {
+    .gallery-item {width: 100%}
+    
+}
+    
+
+@media (min-width: 1025px) and (max-width: 1280px){
+    .gallery-item {width: 50%}
 }
