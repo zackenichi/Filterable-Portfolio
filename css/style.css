@@ -1,4 +1,4 @@
-.gallery{
+.z-gallery{
     
     width: 100%;
     justify-content: left;
@@ -6,19 +6,26 @@
     flex-flow: row wrap;
     
 }
-.gallery-item{
+.z-gallery-item{
     position: relative;
     width: calc(100%/3);
     overflow: hidden;
-    max-height: calc(100vh/3);
+    max-height: none;
     z-index: 2;
-    transform: translate3d(0px, 0px, 0.01px);
     display: none;
+    /* sort effects */
+    
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out;
+    transition: transform .3s ease-in-out, opacity .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  }
 
-}
 
-
-.gallery-item img{
+.z-gallery-item .z-gallery-image{
     width: 100%;
     display: block;
     height: auto;
@@ -30,7 +37,7 @@
     transition: transform 0.3s ease-in;
 }
 
-.gallery-txt{
+.z-gallery-txt{
     
     opacity: 0;
     position: absolute;
@@ -48,24 +55,24 @@
      height: 80%;
     /*width: 92%; */
     border-collapse:collapse;
-
+    border: 2px solid white;
 }
 
 
 
 /*inner text effects*/
-.gallery-subtitle{
+.z-gallery-subtitle{
     opacity: 0;
 }
 
-.gallery-item:hover .gallery-subtitle{
+.z-gallery-item:hover .z-gallery-subtitle{
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
 }
 
 /*end*/
 
-.gallery-item:hover .gallery-image{
+.z-gallery-item:hover .z-gallery-image{
     -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
     filter: grayscale(100%); /* FF 35+ */
     transform: scale(1.2);
@@ -74,7 +81,7 @@
 }
 
 
-.gallery-item:hover .gallery-txt {
+.z-gallery-item:hover .z-gallery-txt {
     transition: width .5s ease-out;
     opacity: 1;
     width: 80%; 
@@ -82,8 +89,97 @@
 
 .show {
     display: block;
+    /* sort effects */
+    -webkit-transform: scale(1);
+          transform: scale(1);
+    opacity: 1;
+    -webkit-animation: z-show-box .5s ease-in-out;
+          animation: z-show-box .5s ease-in-out;
 }
 
+/* sort effects */
+.z-destroy-box{
+    
+    -webkit-transform: scale(0);
+          transform: scale(0);
+    opacity: 0;
+    -webkit-animation: z-hide-box .5s ease-in-out;
+          animation: z-hide-box .5s ease-in-out;
+}
+/* sort animation */
+@-webkit-keyframes z-show-box {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @keyframes z-show-box {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  @-webkit-keyframes z-hide-box {
+    0% {
+      display: block;
+      opacity: 1;
+    }
+    1% {
+      display: none;
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+  }
+  
+  @keyframes z-hide-box {
+    0% {
+      display: none;
+      opacity: 0;
+    }
+    1% {
+      display: block;
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+/* end */
 .btn {
     
     outline: none;
@@ -114,15 +210,14 @@ color: white;
     padding: 20px;
 }
 
-
 /*responsiveness*/
 
 @media (max-width: 1024px) {
-    .gallery-item {width: 100%}
+    .z-gallery-item {width: 100%}
     
 }
     
 
 @media (min-width: 1025px) and (max-width: 1280px){
-    .gallery-item {width: 50%}
+    .z-gallery-item {width: 50%}
 }

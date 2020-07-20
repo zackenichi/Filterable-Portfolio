@@ -35,3 +35,6 @@ added subtitle opacity transition effects
 
 v.1.2.2
 Changed box with, added placeholder for ads and social using css and js,added links,added responsiveness
+
+v1.2.3
+Added sort effects - need to add destroy and resize effects
