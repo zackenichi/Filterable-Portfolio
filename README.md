@@ -38,3 +38,6 @@ Changed box with, added placeholder for ads and social using css and js,added li
 
 v1.2.3
 Added sort effects - need to add destroy and resize effects
+
+v.1.3.0
+Released deployed version - with icons and proper responsiveness
