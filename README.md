@@ -41,3 +41,6 @@ Added sort effects - need to add destroy and resize effects
 
 v.2.0.0
 Switch to Jquery - Isotope.js version
+
+v.2.0.1
+Fixed gap issue

@@ -1,3 +1,7 @@
+/* Visual bug caused by scroll bar */
+
+html { overflow-y: scroll; }
+
 /* button styles */
 .z-portfolio-filter {
     padding: 20px;
@@ -35,8 +39,7 @@ color: white;
     width: 100%;
     /* justify-content: left; */
     display: flex;
-    flex-flow: row wrap;
-    
+    flex-flow: row wrap;    
 }
 
 .z-gallery-item{
