@@ -114,13 +114,25 @@
       </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/z-gallery.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
     
     <script>
+        // entrance magic
+        $(function () {
+            $('.z-gallery-item').addClass('show');
+            setTimeout(function(){
+                $('.z-gallery-item').removeClass('show');
+            }, 1500);
+        });
         // initialize isotope
-       $('.z-gallery').isotope({
+       var $grid = $('.z-gallery').isotope({
            itemSelector: '.z-gallery-item',
            layoutMode: 'fitRows'
        });
+       // layout Isotope after each image loads
+        $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+        });
     //   button controls 
        $('.z-portfolio-filter button').click(function(){
            $('.z-portfolio-filter button').removeClass('active');
