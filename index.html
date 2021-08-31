@@ -1,0 +1,150 @@
+<html>
+<head>
+    <title>Awesome Gallery by ZacKenichi</title>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- The filter -->
+    <div class="z-portfolio-filter">
+        <button class="btn active" data-filter="*">All</button>
+        <button class="btn" data-filter=".branding">Branding</button>
+        <button class="btn" data-filter=".seo">SEO</button>
+        <button class="btn" data-filter=".ads">Google Ads</button>
+        <button class="btn" data-filter=".social">Social Media</button>
+        <button class="btn" data-filter=".websites">Websites</button>
+    </div>
+    <!-- the gallery -->
+    <div class="z-gallery">
+        <div class="z-gallery-item seo">
+            <a href="https://mash.media/case-studies/case-study-advanced-dental-artistry/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/case-ada.jpg" alt="">
+            <div class="z-gallery-txt">
+              <img src="https://mash.media/wp-content/uploads/2020/07/ada.png">
+               
+                <span class="z-gallery-subtitle">
+                    Find out how we made their site 70% faster.
+                </span>
+            </div>
+            </a>
+        </div>
+        <div class="z-gallery-item seo">
+            <a href="https://mash.media/case-studies/case-study-rockingham-holden/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/case-Rockingham.jpg" alt="">
+            <div class="z-gallery-txt">
+              <img src="https://mash.media/wp-content/uploads/2020/07/rockingham.png">
+                
+                <span class="z-gallery-subtitle">
+                    We’re saving them by being streets ahead.
+                </span>
+            </div>
+            </a>
+        </div>
+        <div class="z-gallery-item websites branding">
+            <a href="https://mash.media/case-studies/parrys-carpets/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/case-parrys.jpg" alt="">
+            <div class="z-gallery-txt">
+              <img src="https://mash.media/wp-content/uploads/2020/07/parrys.png">
+                 
+                <span class="z-gallery-subtitle">
+                    3D Rendering Provision for home decor.
+                </span>
+            </div>
+            </a>
+        </div>
+        <div class="z-gallery-item seo">
+            <a href="https://mash.media/case-studies/the-moving-man/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/case-moving-man.jpg" alt="">
+            <div class="z-gallery-txt">
+              <img src="https://mash.media/wp-content/uploads/2020/07/moving-man.png">
+               
+                <span class="z-gallery-subtitle">
+                    Research, Strategy and Implementation of an SEO Project
+                </span>
+            </div>
+        </a>
+        </div>
+        <div class="z-gallery-item websites">
+            <a href="https://mash.media/case-studies/case-study-megadeck/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/case-megadeck.jpg" alt="">
+            <div class="z-gallery-txt">
+              <img src="https://mash.media/wp-content/uploads/2020/07/megadeck.png">
+               
+                <span class="z-gallery-subtitle">
+                    A 62% increase in rental quotes submitted
+                </span>
+            </div>
+        </a>
+        </div>
+        <div class="z-gallery-item seo websites">
+            <a href="https://mash.media/case-studies/mgm-martin/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/case-MGM.jpg" alt="">
+            <div class="z-gallery-txt">
+              <img src="https://mash.media/wp-content/uploads/2020/07/mgm.png">
+                
+                <span class="z-gallery-subtitle">
+                    The merging of 2 well known real estate agencies.
+                </span>
+            </div>
+        </a>
+        </div>
+        <div class="z-gallery-item websites">
+            <a href="https://mash.media/case-studies/case-study-advanced-pest-control/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/case-ACP.jpg" alt="">
+            <div class="z-gallery-txt">
+              <img src="https://mash.media/wp-content/uploads/2020/07/apc.png">
+               
+                <span class="z-gallery-subtitle">
+                    A Website Development Case Study
+                </span>
+            </div>
+            </a>
+        </div>
+       
+        <div class="z-gallery-item no-result ads social">
+            <a href="https://mash.media/contact/" target="_blank" rel="noopener noreferrer">
+            <img class="z-gallery-image" src="https://mash.media/wp-content/uploads/2020/07/new-project.jpg" alt="">
+            
+            <div class="z-gallery-txt">
+               <img src="https://mash.media/wp-content/uploads/2020/07/mash-case-contact.png">
+            </div>
+        </a>
+        </div>
+        
+        
+      </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/z-gallery.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    
+    <script>
+        // entrance magic
+        $(function () {
+            $('.z-gallery-item').addClass('show');
+            setTimeout(function(){
+                $('.z-gallery-item').removeClass('show');
+            }, 1500);
+        });
+        // initialize isotope
+       var $grid = $('.z-gallery').isotope({
+           itemSelector: '.z-gallery-item',
+           layoutMode: 'fitRows'
+       });
+       // layout Isotope after each image loads
+        $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+        });
+    //   button controls 
+       $('.z-portfolio-filter button').click(function(){
+           $('.z-portfolio-filter button').removeClass('active');
+           $(this).addClass('active');
+
+        //  filter functionality
+        var selector = $(this).attr('data-filter');
+        $('.z-gallery').isotope({
+            filter: selector
+        });
+        return false;  
+       });
+    </script>
+</body>
+</html>
