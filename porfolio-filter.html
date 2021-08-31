@@ -1,116 +1,242 @@
 <html>
+
 <head>
-  <title>Zac's Filterable Portfolio App</title>
-  <link href="css/style.css" rel="stylesheet" />
+    <title>Zac's Filterable Portfolio App</title>
+    <link href="css/style.css" rel="stylesheet" />
 </head>
+
 <body>
-  <div id="z-portfolio-filter">
-    <button class="btn active" onclick="filterSelection('all')">All</button>
-    <button class="btn" onclick="filterSelection('branding')">Branding</button>
-    <button class="btn" onclick="filterSelection('seo')">SEO</button>
-    <button class="btn" onclick="filterSelection('ads')">Google Ads</button>
-    <button class="btn" onclick="filterSelection('social')">Social Media</button>
-    <button class="btn" onclick="filterSelection('websites')">Websites</button>
+    <!-- The filter -->
+    <div class="z-portfolio-filter">
+        <button class="btn active" data-filter="*">All</button>
+        <button class="btn" data-filter=".branding">Branding</button>
+        <button class="btn" data-filter=".seo">SEO</button>
+        <button class="btn" data-filter=".ads">Google Ads</button>
+        <button class="btn" data-filter=".social">Social Media</button>
+        <button class="btn" data-filter=".websites">Websites</button>
+    </div>
+    <!-- the gallery -->
+    <div class="z-gallery">
+        <div class="grid-sizer"></div>
+        <div class="z-gallery-item seo">
+            <a href="#">
+                <img class="z-gallery-image" src="images/case-ada.jpg" alt="">
+                <div class="z-gallery-txt">
 
-</div>
 
-  <div class="z-gallery">
-    <div class="z-gallery-item seo">
-        <a href="https://mash.media/case-studies/case-study-advanced-dental-artistry/" target="_blank">
-        <img class="z-gallery-image" src="images/case-ada.jpg" alt="">
-        <div class="z-gallery-txt">
-            
-            <h3>Advanced Dental Artistry </h3> 
-            <span class="z-gallery-subtitle">
-                Find out how we made their site 70% faster.
-            </span>
+                    <span class="z-gallery-subtitle">
+                        <h2>
+                            Advanced Dental Artistry
+                        </h2>
+                        Find out how we made their site 70% faster.
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="z-gallery-item seo">
+            <a href="#">
+                <img class="z-gallery-image" src="images/case-Rockingham.jpg" alt="">
+                <div class="z-gallery-txt">
+
+
+                    <span class="z-gallery-subtitle">
+                        <h2>
+                            Rockingham Holden
+                        </h2>
+                        We’re saving them by being streets ahead.
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="z-gallery-item websites branding">
+            <a href="#">
+                <img class="z-gallery-image" src="images/case-parrys.jpg" alt="">
+                <div class="z-gallery-txt">
+
+
+                    <span class="z-gallery-subtitle">
+                        <h2>
+                            Parry's Carpets
+                        </h2>
+                        3D Rendering Provision for home decor.
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="z-gallery-item seo">
+            <a href="#">
+                <img class="z-gallery-image" src="images/case-moving man.jpg" alt="">
+                <div class="z-gallery-txt">
+
+
+                    <span class="z-gallery-subtitle">
+                        <h2>
+                            Moving man
+                        </h2>
+                        Strategic implementation of an SEO Project
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="z-gallery-item websites">
+            <a href="#">
+                <img class="z-gallery-image" src="images/case-megadeck.jpg" alt="">
+                <div class="z-gallery-txt">
+
+
+                    <span class="z-gallery-subtitle">
+                        <h2>
+                            Megadeck Staging
+                        </h2>
+                        A 62% increase in rental quotes submitted
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="z-gallery-item branding seo websites">
+            <a href="#">
+                <img class="z-gallery-image" src="images/case-MGM.jpg"">
+                <div class=" z-gallery-txt">
+
+
+                <span class="z-gallery-subtitle">
+                    <h2>
+                        MGM Martin
+                    </h2>
+                    Branding a company merger
+                </span>
         </div>
         </a>
-    </div>
-    <div class="z-gallery-item seo">
-        <a href="https://mash.media/case-studies/case-study-rockingham-holden/" target="_blank">
-        <img class="z-gallery-image" src="images/case-Rockingham.jpg" alt="">
-        <div class="z-gallery-txt">
-            <h3>Rockingham Holden</h3> 
-            <span class="z-gallery-subtitle">
-                We’re saving them by being streets ahead.
-            </span>
-        </div>
-        </a>
-    </div>
-    <div class="z-gallery-item websites branding">
-        <a href="https://mash.media/case-studies/parrys-carpets/" target="_blank">
-        <img class="z-gallery-image" src="images/case-parrys.jpg" alt="">
-        <div class="z-gallery-txt">
-            <h3>Parry’s Carpet</h3> 
-            <span class="z-gallery-subtitle">
-                3D Rendering Provision for home decor.
-            </span>
-        </div>
-        </a>
-    </div>
-    <div class="z-gallery-item seo">
-        <a href="https://mash.media/case-studies/the-moving-man/" target="_blank">
-        <img class="z-gallery-image" src="images/case-moving man.jpg" alt="">
-        <div class="z-gallery-txt">
-            <h3>The Moving Man</h3> 
-            <span class="z-gallery-subtitle">
-                Research, Strategy and Implementation of an SEO Project
-            </span>
-        </div>
-    </a>
     </div>
     <div class="z-gallery-item websites">
-        <a href="https://mash.media/case-studies/case-study-megadeck/" target="_blank">
-        <img class="z-gallery-image" src="images/case-megadeck.jpg" alt="">
-        <div class="z-gallery-txt">
-            <h3>Megadeck Staging</h3> 
-            <span class="z-gallery-subtitle">
-                A 62% increase in rental quotes submitted
-            </span>
-        </div>
-    </a>
-    </div>
-    <div class="z-gallery-item seo websites">
-        <a href="https://mash.media/case-studies/mgm-martin/" target="_blank">
-        <img class="z-gallery-image" src="images/case-MGM.jpg" alt="">
-        <div class="z-gallery-txt">
-            <h3>MGM Martin</h3> 
-            <span class="z-gallery-subtitle">
-                The merging of 2 well known real estate agencies.
-            </span>
-        </div>
-    </a>
-    </div>
-    <div class="z-gallery-item websites">
-        <a href="https://mash.media/case-studies/case-study-advanced-pest-control/" target="_blank">
-        <img class="z-gallery-image" src="images/case-ACP.jpg" alt="">
-        <div class="z-gallery-txt">
-            <h3>Advanced Pest Control</h3> 
-            <span class="z-gallery-subtitle">
-                A Website Development Case Study
-            </span>
-        </div>
+        <a href="#">
+            <img class="z-gallery-image" src="images/case-ACP.jpg" alt="">
+            <div class="z-gallery-txt">
+
+
+                <span class="z-gallery-subtitle">
+                    <h2>
+                        Advanced Pest Control
+                    </h2>
+                    A Website Development Case Study
+                </span>
+            </div>
         </a>
     </div>
-   
-    <div class="z-gallery-item no-result ads social">
-        <a href="https://mash.media/contact/" target="_blank">
-        <img class="z-gallery-image" src="images/new-project.jpg" alt="">
-        
-        <div class="z-gallery-txt">
-            <h3>Have a project?</h3> 
-            <span class="z-gallery-subtitle">
-                Contact us now and let us show you the great results we’ve gotten for clients just like you
-            </span>
-        </div>
-    </a>
-    </div>  
-  </div>
 
-  <script src="js/script.js"></script>
-  <!-- sort effects -->
-  <script src="js/isotope.pkgd.min.js"></script>
+    <div class="z-gallery-item ads">
+        <a href="#">
+            <img class="z-gallery-image" src="images/case-thumbs-rentokil.jpg" alt="">
+            <div class="z-gallery-txt">
+
+
+                <span class="z-gallery-subtitle">
+                    <h2>
+                        Rentokil
+                    </h2>
+                    3D Supercharged Google Ads Conversions
+                </span>
+            </div>
+        </a>
+    </div>
+
+    <div class="z-gallery-item seo">
+        <a href="#">
+            <img class="z-gallery-image" src="images/zecca-card.jpg" alt="">
+
+            <div class="z-gallery-txt">
+
+
+                <span class="z-gallery-subtitle">
+                    <h2>
+                        Zecca
+                    </h2>
+                    Local SEO Case Study
+                </span>
+
+            </div>
+        </a>
+    </div>
+
+
+
+    <div class="z-gallery-item seo">
+        <a href="#">
+            <img class="z-gallery-image" src="images/Acrow-Card.jpg" alt="">
+
+            <div class="z-gallery-txt">
+
+
+                <span class="z-gallery-subtitle">
+                    <h2>
+                        Acrow Investments
+                    </h2>
+                    SEO Case Study
+                </span>
+
+            </div>
+        </a>
+    </div>
+
+    <div class="z-gallery-item branding social">
+        <a href="#">
+            <img class="z-gallery-image" src="images/Matvet-card.jpg" alt="">
+
+            <div class="z-gallery-txt">
+
+
+                <span class="z-gallery-subtitle">
+                    <h2>
+                        Matraville Vets
+                    </h2>
+                    Branding Case Study
+                </span>
+
+            </div>
+        </a>
+    </div>
+
+
+    </a>
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+        // entrance magic
+        $(function () {
+            $('.z-gallery-item').addClass('show');
+            setTimeout(function () {
+                $('.z-gallery-item').removeClass('show');
+            }, 1500);
+        });
+        // initialize isotope
+        var $grid = $('.z-gallery').isotope({
+            itemSelector: '.z-gallery-item',
+            percentPosition: true,
+            layoutMode: 'fitRows'
+        });
+        // layout Isotope after each image loads
+        $grid.imagesLoaded().progress(function () {
+            $grid.isotope('layout');
+        });
+        //   button controls 
+        $('.z-portfolio-filter button').click(function () {
+            $('.z-portfolio-filter button').removeClass('active');
+            $(this).addClass('active');
+
+            //  filter functionality
+            var selector = $(this).attr('data-filter');
+            $('.z-gallery').isotope({
+                filter: selector
+            });
+            return false;
+        });
+    </script>
 </body>
 
 
