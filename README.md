@@ -1,5 +1,6 @@
 # Filterable-Portfolio
-A filterable portfolio application with awesome effects
+
+A filterable portfolio application with awesome effects built with jQuery and IsotopeJS
 
 v.1.0.0
 Uploaded initial version 7/15/2020
@@ -10,7 +11,7 @@ Divided css and js to different files
 v.1.1.0
 Added hover effects : Slow mo zoom and greyscale
 
-v.1.1.1 
+v.1.1.1
 Updated images,
 adjusted hover transition durations,
 Added text but still need to fix hover effects
